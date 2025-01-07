@@ -3,8 +3,7 @@
 The frontend for the Movie Portal application. This dynamic, user-friendly interface allows users to explore movies, view their details, and manage their favorite movies seamlessly.
 
 ## Live Site URL
-https://movie-portal-46448.web.app/
-
+https://movie-portal-9b8ab.web.app/
 ---
 
 ## Features
