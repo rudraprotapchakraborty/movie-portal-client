@@ -54,7 +54,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/allMovies",
-        element: <AllMovies></AllMovies>,
+        element: <PrivateRoute><AllMovies></AllMovies></PrivateRoute>,
         loader: () => fetch('https://movie-portal-server-two-pink.vercel.app/movie'),
       },
       {

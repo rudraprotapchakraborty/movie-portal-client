@@ -4,6 +4,7 @@ The frontend for the Movie Portal application. This dynamic, user-friendly inter
 
 ## Live Site URL
 https://movie-portal-9b8ab.web.app/
+
 ---
 
 ## Features
