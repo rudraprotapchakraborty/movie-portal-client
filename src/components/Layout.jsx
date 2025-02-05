@@ -9,7 +9,6 @@ const Layout = () => {
 
     return (
         <div className={darkMode ? "bg-gray-800" : "bg-gray-50"}>
-            {/* Pass down the toggleDarkMode function to Navbar */}
             <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
             <Outlet />
             <Footer />

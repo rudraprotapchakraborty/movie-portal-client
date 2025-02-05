@@ -9,7 +9,7 @@ const Header = () => {
     const [scrolling, setScrolling] = useState(false);
     const { user, logOut } = useContext(AuthContext);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { darkMode, toggleDarkMode } = useContext(ThemeContext); // Get theme context
+    const { darkMode, toggleDarkMode } = useContext(ThemeContext);
 
     const handleLogOut = () => {
         logOut();
@@ -37,10 +37,10 @@ const Header = () => {
                     to="/"
                     onClick={() => setActiveLink('home')}
                     className={`${activeLink === 'home'
-                            ? 'text-green-500' // Active link color
-                            : darkMode
-                                ? 'text-gray-300 hover:text-green-300'
-                                : 'text-gray-700 hover:text-green-500'
+                        ? 'text-green-500' // Active link color
+                        : darkMode
+                            ? 'text-gray-300 hover:text-green-300'
+                            : 'text-gray-700 hover:text-green-500'
                         } transition-transform duration-200 ease-in-out transform hover:scale-105`}
                 >
                     Home
@@ -53,10 +53,10 @@ const Header = () => {
                             to="/allMovies"
                             onClick={() => setActiveLink('allMovies')}
                             className={`${activeLink === 'allMovies'
-                                    ? 'text-green-500'
-                                    : darkMode
-                                        ? 'text-gray-300 hover:text-green-300'
-                                        : 'text-gray-700 hover:text-green-500'
+                                ? 'text-green-500'
+                                : darkMode
+                                    ? 'text-gray-300 hover:text-green-300'
+                                    : 'text-gray-700 hover:text-green-500'
                                 } transition-transform duration-200 ease-in-out transform hover:scale-105`}
                         >
                             All Movies
@@ -67,10 +67,10 @@ const Header = () => {
                             to="/addMovie"
                             onClick={() => setActiveLink('addMovie')}
                             className={`${activeLink === 'addMovie'
-                                    ? 'text-green-500'
-                                    : darkMode
-                                        ? 'text-gray-300 hover:text-green-300'
-                                        : 'text-gray-700 hover:text-green-500'
+                                ? 'text-green-500'
+                                : darkMode
+                                    ? 'text-gray-300 hover:text-green-300'
+                                    : 'text-gray-700 hover:text-green-500'
                                 } transition-transform duration-200 ease-in-out transform hover:scale-105`}
                         >
                             Add Movie
@@ -81,10 +81,10 @@ const Header = () => {
                             to="/favorites"
                             onClick={() => setActiveLink('favorites')}
                             className={`${activeLink === 'favorites'
-                                    ? 'text-green-500'
-                                    : darkMode
-                                        ? 'text-gray-300 hover:text-green-300'
-                                        : 'text-gray-700 hover:text-green-500'
+                                ? 'text-green-500'
+                                : darkMode
+                                    ? 'text-gray-300 hover:text-green-300'
+                                    : 'text-gray-700 hover:text-green-500'
                                 } transition-transform duration-200 ease-in-out transform hover:scale-105`}
                         >
                             Favorites
@@ -97,14 +97,14 @@ const Header = () => {
 
     return (
         <div
-            className={`sticky z-50 backdrop-blur-md shadow-xl rounded-full w-11/12 mx-auto px-4 py-3 transition-all duration-300 ${scrolling ? 'top-0' : 'top-4'
+            className={`sticky z-50 backdrop-blur-md shadow-xl rounded-full w-11/12 mx-auto px-2 py-1 md:px-4 md:py-3 transition-all duration-300 ${scrolling ? 'top-0' : 'top-4'
                 } ${darkMode ? 'bg-gray-900 bg-opacity-90' : 'bg-white bg-opacity-90'}`}
         >
             <div className="flex justify-between items-center">
                 {/* Left Section - Logo */}
                 <NavLink>
                     <button
-                        className={`text-xl md:text-2xl font-bold transition-transform duration-300 transform hover:scale-105 ${darkMode ? 'text-green-300 hover:text-green-400' : 'text-green-500 hover:text-green-600'
+                        className={`text-sm md:text-2xl font-bold transition-transform duration-300 transform hover:scale-105 ${darkMode ? 'text-green-300 hover:text-green-400' : 'text-green-500 hover:text-green-600'
                             }`}
                     >
                         <p>
@@ -117,18 +117,18 @@ const Header = () => {
 
                 {/* Centered Menu for Desktop */}
                 <div className="hidden lg:flex">
-                    <ul className="flex gap-10">{links}</ul>
+                    <ul className="flex font-bold gap-10">{links}</ul>
                 </div>
 
                 {/* Right Section - Theme Toggle, Login/Register, User Profile */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center md:gap-4">
                     {/* Theme Toggle Button */}
                     <button
                         onClick={toggleDarkMode}
-                        className={`p-2 rounded-full shadow-lg transition-transform duration-300 transform hover:scale-105 ${darkMode ? 'bg-green-700 hover:bg-green-600 text-white' : 'bg-green-500 hover:bg-green-600 text-white'
+                        className={`p-1.5 md:p-2 rounded-full shadow-lg transition-transform duration-300 transform hover:scale-105 ${darkMode ? 'bg-green-700 hover:bg-green-600 text-white' : 'bg-green-500 hover:bg-green-600 text-white'
                             }`}
                     >
-                        {darkMode ? <FaMoon className="md:text-xl" /> : <FaSun className="md:text-xl" />}
+                        {darkMode ? <FaMoon className="text-sm md:text-xl" /> : <FaSun className="text-sm md:text-xl" />}
                     </button>
 
                     {/* User Profile or Login */}
@@ -194,7 +194,7 @@ const Header = () => {
 
                     {isMenuOpen && (
                         <ul
-                            className={`absolute right-4 top-12 p-4 space-y-4 rounded-lg shadow-xl z-50 ${darkMode ? 'bg-black bg-opacity-90 text-gray-300' : 'bg-white text-gray-700'
+                            className={`absolute right-4 top-12 p-4 space-y-4 rounded-lg shadow-xl font-bold z-50 ${darkMode ? 'bg-black bg-opacity-90 text-gray-300' : 'bg-white text-gray-700'
                                 }`}
                         >
                             {links}

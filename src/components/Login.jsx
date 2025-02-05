@@ -66,7 +66,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gradient-to-r from-green-100 to-green-300 dark:from-gray-800 dark:to-gray-900 transition-colors duration-500">
+    <div className="min-h-screen flex justify-center items-center bg-gray-50 dark:bg-gray-800 transition-colors duration-500">
       <motion.div
         className="bg-white dark:bg-gray-800 shadow-lg rounded-xl w-full max-w-md p-10"
         initial={{ opacity: 0, y: 30 }}
